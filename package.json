@@ -1,0 +1,22 @@
+{
+  "name": "koishi-plugin-smmcat-koishimonitor",
+  "description": "监听koishi社区最新消息",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "devDependencies": {},
+  "peerDependencies": {
+    "koishi": "^4.17.6"
+  }
+}
