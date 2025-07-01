@@ -29,6 +29,8 @@ export const Config: Schema<Config> = Schema.object({
 
 export function apply(ctx: Context, config: Config) {
 
+  let fastTime = true
+
   // 消息控件
   const msg = {
     send: async (str: String) => {
@@ -137,6 +139,11 @@ ${config.displayUrl ? `链接：https://forum.koishi.xyz/t/topic/${beforMsg[item
     })
 
     lastMsg = msgInfo
+    
+    if (fastTime) {
+      fastTime = false
+      return
+    }
     msg.send && await msg.send('\n[ ! ] koishi社区 有新消息！\n' + msgInfo)
   }
   ctx.setInterval(() => {
